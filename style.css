@@ -1,0 +1,173 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Lato, sans-serif;
+    background-color: #a3886F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dice {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 100px;
+    animation-name: diceRotation;
+    /* animation-duration: 0.5s;
+    animation-timing-function: ease-in-out; */
+
+}
+
+@keyframes diceRotation {
+    from {transform: rotate(0deg)}
+    17% {transform: rotate(60deg)}
+    34% {transform: rotate(120deg)}
+    51% {transform: rotate(180deg)}
+    68% {transform: rotate(240deg)}
+    85% {transform: rotate(300deg)}
+    to {transform: rotate(360deg)}
+}
+
+.container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #d7d5d5;
+    padding: 100px;
+}
+
+.buttons_dice {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.buttonNewGame{
+    margin-bottom: 100px;
+    font-size: 1.3rem;
+    color: #c98e96;
+    background-color: #d7d5d5;
+}
+
+.buttonNewGame span{
+    color: black;
+    margin-left: 15px;
+
+}
+
+.buttonRollDice{
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #c98e96;
+    background-color: #d7d5d5;
+
+}
+
+.buttonRollDice span{
+    color: black;
+    margin-left: 15px;
+    background-color: #d7d5d5;
+}
+
+.buttonHold{
+    font-size: 1.3rem;
+    color: #c98e96;
+    background-color: #d7d5d5;
+}
+
+.buttonHold span{
+    color: black;
+    margin-left: 15px;
+}
+
+
+
+.player1, .player2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Lato, sans-serif;
+}
+
+.player1Name {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.player1Turn {
+    display: inline;
+    content: "\2022";
+    font-size: 50px;
+    color: red;
+}
+
+
+.player2Name {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.player2Turn {
+    display: none;
+    content: "\2022";
+    font-size: 50px;
+    color: red;
+}
+
+
+.player1GlobalScore, .player2GlobalScore {
+    font-family: Lato, sans-serif;
+    font-size: 3rem;
+}
+
+.currentScore{
+    background-color: #ea4d4c;
+    margin-top:50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.player1CurrentScoreTitle, .player2CurrentScoreTitle{
+    color: black;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.player1CurrentScore, .player2CurrentScore{
+    font-family: Lato, sans-serif;
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+
+@media screen and (min-width: 850px) {
+    .container{
+        flex-direction: row;
+    }
+
+    .player1 {
+        width: 33%;
+    }
+
+    .buttons_dice{
+        width: 33%;
+    }
+
+    .player2 {
+        width: 33%;
+    }
+}
